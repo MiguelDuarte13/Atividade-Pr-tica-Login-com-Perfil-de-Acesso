@@ -21,11 +21,11 @@ Funcionalidades:
 
 ### Aplicação com 5 funcionários
 
-![Aplicação com 5 funcionários](public/img/Aplicação%20com%205%20funcionários.png)
+![Aplicação com 5 funcionários](public/img/Aplicação%20com%206%20funcionários.jpeg)
 
 ### LocalStorage
 
-![LocalStorage](public/img/LocalStorage.png)
+![LocalStorage](public/img/LocalStorage.jpeg)
 
 
 ### Boas Vindas!!!
