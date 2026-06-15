@@ -1,4 +1,21 @@
 
+
+const usuario =
+    JSON.parse(
+        sessionStorage.getItem("usuarioLogado")
+    );
+
+if (!usuario) {
+    window.location.href = "index.html";
+}
+
+if (usuario.tipo !== "admin") {
+    window.location.href = "boasvindas.html";
+}
+
+
+
+
 let funcionarios =
     JSON.parse(localStorage.getItem("funcionarios")) || [];
 
@@ -13,7 +30,10 @@ const btnCadastrar =
     document.getElementById("btnCadastrar");
 
 
+
+
 function salvarLocalStorage() {
+
     localStorage.setItem(
         "funcionarios",
         JSON.stringify(funcionarios)
@@ -21,10 +41,15 @@ function salvarLocalStorage() {
 }
 
 
+
+
 function atualizarQuantidade() {
+
     quantidade.textContent =
         `Total de funcionários: ${funcionarios.length}`;
 }
+
+
 
 
 function listarFuncionarios() {
@@ -34,6 +59,7 @@ function listarFuncionarios() {
     funcionarios.forEach(funcionario => {
 
         const card = document.createElement("div");
+
         card.classList.add("card");
 
         card.innerHTML = `
@@ -48,6 +74,8 @@ function listarFuncionarios() {
 
     atualizarQuantidade();
 }
+
+
 
 
 function cadastrarFuncionario() {
@@ -90,6 +118,7 @@ function cadastrarFuncionario() {
     funcionarios.push(novoFuncionario);
 
     salvarLocalStorage();
+
     listarFuncionarios();
 
     document.getElementById("nome").value = "";
@@ -100,10 +129,26 @@ function cadastrarFuncionario() {
 }
 
 
+
+
+function logout() {
+
+    sessionStorage.removeItem(
+        "usuarioLogado"
+    );
+
+    window.location.href = "index.html";
+}
+
+
+
+
 btnCadastrar.addEventListener(
     "click",
     cadastrarFuncionario
 );
+
+
 
 
 listarFuncionarios();

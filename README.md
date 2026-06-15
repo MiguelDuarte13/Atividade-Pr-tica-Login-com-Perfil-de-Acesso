@@ -26,3 +26,8 @@ Funcionalidades:
 ### LocalStorage
 
 ![LocalStorage](public/img/LocalStorage.png)
+
+
+### Boas Vindas!!!
+
+![Boas Vindas](public/img/BOAS%20VINDAS.jpeg)

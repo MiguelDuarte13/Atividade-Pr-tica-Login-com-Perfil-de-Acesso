@@ -2,30 +2,34 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Funcionários</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>Cadastro de Funcionários</h1>
+    <h1>Login</h1>
 
-    <section class="formulario">
-        <input type="text" id="nome" placeholder="Nome">
-        <input type="email" id="email" placeholder="E-mail">
-        <input type="text" id="cargo" placeholder="Cargo">
-        <input type="text" id="departamento" placeholder="Departamento">
-        <input type="password" id="senha" placeholder="Senha">
+    <div class="formulario">
 
-        <button id="btnCadastrar">
-            Cadastrar Funcionário
+        <input
+            type="text"
+            id="login"
+            placeholder="Login ou E-mail">
+
+        <input
+            type="password"
+            id="senha"
+            placeholder="Senha">
+
+        <button id="entrar">
+            Entrar
         </button>
-    </section>
 
-    <h2 id="quantidade">Total de funcionários: 0</h2>
+        <p id="mensagem"></p>
 
-    <section id="listaFuncionarios"></section>
+    </div>
 
-    <script src="script.js"></script>
+    <script src="login.js"></script>
+
 </body>
 </html>
